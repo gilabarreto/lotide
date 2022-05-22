@@ -9,9 +9,9 @@ const assertArraysEqual = function(array1, array2) {
   return "🟢🟢🟢 Assertion Passed: The arrays are equal.";
 };
 
-const words = ["hello", "world", "lighthouse"];
+const words = ["a", "b", "c"];
 
-console.log(assertArraysEqual(words, ["hello", "world", "lighthouse"]))
+console.log(assertArraysEqual(words, ["a", "b", "c"]))
 /* console.log(assertArraysEqual([1, 2, 3], [3, 2, 1]));
 
 console.log(assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]));
