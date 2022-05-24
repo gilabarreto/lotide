@@ -1,24 +1,22 @@
-/* const assertEqual = function(actual, expected) {
+const assertEqual = function (actual, expected) {
   if (actual === expected) {
     console.log(`🟢🟢🟢 Assertion Passed: ${actual} === ${expected}`);
   } else {
     console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
   }
-}; */
+};
 
-const countLetters = function(newString) {
+const countLetters = function (string) {
 
   const result = {};
-  const newArray = newString.split("");
+  const newArray = string.split("")
   for (const item of newArray) {
-    if (result[item]) {
-      result[item] += 1;
-    } else {
-      result[item] = 1;
-    }
+    console.log(item)
+    result[item] = result[item] + 1
+    result[item] + 1
   }
   return result;
-};
+}
 
 console.log(countLetters("LHL"));
 

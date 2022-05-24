@@ -6,10 +6,10 @@
   }
 }; */
 
-const countLetters = function(newString) {
+const countLetters = function(string) {
 
   const result = {};
-  const newArray = newString.split("");
+  const newArray = string.split("");
   for (const item of newArray) {
     if (result[item]) {
       result[item] += 1;
