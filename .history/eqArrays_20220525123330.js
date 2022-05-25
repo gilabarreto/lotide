@@ -14,27 +14,14 @@ const eqArrays = function(array1, array2) {
       } else {
         return false;
       }
+      return true
     }
-    return true
   }
   return false;
 };
 
-const flatten = function (array1) {
+assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => true
+assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), false); // => false
 
-  let newArray = [];
-
-  for (let x = 0; x < array1.length; x++) {
-    if (Array.isArray(array1[x])) {
-      for (let y = 0; y < array1[x].length; y++) {
-        newArray.push(array1[x][y])
-      }
-    } else {
-      newArray.push(array1[x])
-    }
-  }
-  return newArray;
-}
-
-
-console.log(flatten([1, 2, [3, 4], 5, [6]])) // => [1, 2, 3, 4, 5, 6]
+assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3", "4"]), false); // => true
+assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false); // => false
