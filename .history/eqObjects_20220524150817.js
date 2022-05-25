@@ -1,0 +1,63 @@
+const assertEqual = function (actual, expected) {
+  if (actual === expected) {
+    console.log(`🟢🟢🟢 Assertion Passed: ${actual} === ${expected}`);
+  } else {
+    console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
+  }
+};
+
+// Returns true if both objects have identical keys with identical values.
+// Otherwise you get back a big fat false!
+const eqObjects = function (object1, object2) {
+
+  const eqArrays = function (array1, array2) {
+    if (array1.length === array2.length) {
+      for (let x = 0; x < array1.length; x++) {
+        if (array1[x] === array2[x]) {
+          return true;
+        } else {
+          null;
+        }
+      }
+    }
+    return false;
+  };
+
+  for (let x = 0; x < array1.length; x++) {
+    if (Array.isArray(array1[x])) {
+      for (let y = 0; y < array1[x].length; y++) {
+        newArray.push(array1[x][y])
+      }
+    } else {
+      newArray.push(array1[x])
+    }
+  }
+ 
+
+  if (Object.keys(object1).length === Object.keys(object2).length) {
+    for (let key in object1) {
+      if (object1[key] === object2[key]) {
+        null
+      } else {
+        return false
+      }
+    }
+    return true
+  }
+  return false;
+};
+
+const cd = { c: "1", d: ["2", 3] };
+const dc = { d: ["2", 3], c: "1" };
+assertEqual(eqObjects(cd, dc), true); // => true
+
+const cd2 = { c: "1", d: ["2", 3, 4] };
+assertEqual(eqObjects(cd, cd2), false); // => false
+
+/* const ab = { a: "1", b: "2" };
+const ba = { b: "2", a: "1" };
+console.log(eqObjects(ab, ba)); // => true
+
+const abc = { a: "1", b: "2", c: "3" };
+assertEqual(eqObjects(ab, abc), false); */
+
