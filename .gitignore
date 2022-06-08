@@ -1,1 +1,5 @@
+#Files and Folders to ignore
+
 .history/
+.swo
+.swp
