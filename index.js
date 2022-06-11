@@ -7,6 +7,7 @@ const tail = require('./tail');
 const countOnly = require('./countOnly');
 const letterPositions = require('./letterPositions');
 const findKeyByValue = require('./findKeyByValue');
+const eqObjects = require('./eqObjects');
 
 module.exports = {
   assertArraysEqual,
@@ -17,5 +18,6 @@ module.exports = {
   tail,
   countOnly,
   letterPositions,
-  findKeyByValue
+  findKeyByValue,
+  eqObjects
 };
