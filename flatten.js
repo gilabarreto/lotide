@@ -1,40 +1,22 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`🟢🟢🟢 Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+// Flatten is a function which can flatten into a single-level array an array with other arrays inside.
 
-const eqArrays = function(array1, array2) {
-  if (array1.length === array2.length) {
-    for (let x = 0; x < array1.length; x++) {
-      if (array1[x] === array2[x]) {
-        null;
-      } else {
-        return false;
-      }
-    }
-    return true
-  }
-  return false;
-};
+const assertEqual = require('./assertEqual');
+const eqArrays = require('./eqArrays');
 
-const flatten = function (array1) {
+const flatten = function(array1) {
 
   let newArray = [];
 
-  for (let x = 0; x < array1.length; x++) {
-    if (Array.isArray(array1[x])) {
-      for (let y = 0; y < array1[x].length; y++) {
-        newArray.push(array1[x][y])
-      }
+  array1.forEach((item) => {
+    if (Array.isArray(item)) {
+      const recursion = flatten(item);
+      recursion.forEach((item) => newArray.push(item));
     } else {
-      newArray.push(array1[x])
+      newArray.push(item);
     }
-  }
+  });
+
   return newArray;
-}
+};
 
-
-console.log(flatten([1, 2, [3, 4], 5, [6]])) // => [1, 2, 3, 4, 5, 6]
+module.exports = flatten;
