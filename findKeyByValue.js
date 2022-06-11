@@ -1,12 +1,10 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`🟢🟢🟢 Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+/* The function findKeyByValue takes in an object and a value,
+scans the object and return the first key which contains the given value.
+2If no key with that given value is found, then it should return undefined. */
 
-const findKeyByValue = function (obj, keyObj) {
+const assertEqual = require('./assertEqual');
+
+const findKeyByValue = function(obj, keyObj) {
 
   let result;
 
@@ -14,17 +12,10 @@ const findKeyByValue = function (obj, keyObj) {
     if (obj[key] === keyObj) {
       result = key;
     } else {
-      null
+      null;
     }
   }
   return result;
-}
-
-const bestTVShowsByGenre = {
-  sci_fi: "The Expanse",
-  comedy: "Brooklyn Nine-Nine",
-  drama: "The Wire"
 };
 
-assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
-assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
+module.exports = findKeyByValue;

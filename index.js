@@ -4,17 +4,18 @@ const eqArrays = require('./eqArrays');
 const head = require('./head');
 const middle = require('./middle');
 const tail = require('./tail');
-const countOnly = require('../countOnly');
-const letterPositions = require('../letterPositions');
+const countOnly = require('./countOnly');
+const letterPositions = require('./letterPositions');
+const findKeyByValue = require('./findKeyByValue');
 
-
-module.exports = { 
-  assertArraysEqual, 
-  assertEqual, 
-  eqArrays, 
-  head, 
-  middle, 
-  tail, 
-  countOnly, 
-  letterPositions 
+module.exports = {
+  assertArraysEqual,
+  assertEqual,
+  eqArrays,
+  head,
+  middle,
+  tail,
+  countOnly,
+  letterPositions,
+  findKeyByValue
 };
