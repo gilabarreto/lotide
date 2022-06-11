@@ -1,14 +1,10 @@
-const assertArraysEqual = function (array1, array2) {
-  for (let x = 0; x < array1.length; x++) {
-    if (array1.length !== array2.length || array1[x] !== array2[x]) {
-      return "🔴🔴🔴 Assertion Failed: The arrays are different.";
-    } else {
-      null;
-    }
-  }
-  return "🟢🟢🟢 Assertion Passed: The arrays are equal.";
-};
+/* We'll implement a new function letterPositions which will return all the indices (zero-based positions)
+in the string where each character is found.
 
+For each letter, instead of returning just one number to represent its number of occurrences,
+multiple numbers may be needed to represent all the places in the string that it shows up. */
+
+const assertArraysEqual = require('./assertArraysEqual');
 
 const letterPositions = function(newString) {
 
@@ -25,10 +21,4 @@ const letterPositions = function(newString) {
   return result;
 };
 
-console.log(letterPositions("hello").l);
-
-console.log(letterPositions("hello"));
-console.log(assertArraysEqual(letterPositions("hello").h, [0]));
-console.log(assertArraysEqual(letterPositions("hello").e, [1]));
-console.log(assertArraysEqual(letterPositions("hello").l, [2, 3]));
-console.log(assertArraysEqual(letterPositions("hello").o, [4])) ;
+module.exports = letterPositions;
