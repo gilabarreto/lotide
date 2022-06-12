@@ -1,3 +1,7 @@
+// DESCRIPTION: A function that takes in an array and returns middle most element of the array.
+
+// FUNCTION IMPLEMENTATION
+
 const assertArraysEqual = require('./assertArraysEqual');
 const eqArrays = require('./eqArrays');
 

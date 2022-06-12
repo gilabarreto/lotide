@@ -1,3 +1,7 @@
+// DESCRIPTION: A function that takes in an array and callback and returns a slice of the array based on the criteria specified in the callback.
+
+// FUNCTION IMPLEMENTATION
+
 const assertArraysEqual = require('./assertArraysEqual');
 
 const eqArrays = function(array1, array2) {

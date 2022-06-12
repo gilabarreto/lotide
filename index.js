@@ -1,3 +1,5 @@
+// DESCRIPTION: index.js file that exports all the functions in Lotide as an object.
+
 const assertArraysEqual = require('./assertArraysEqual');
 const assertEqual = require('./assertEqual');
 const assertObjectsEqual = require('./assertObjectsEqual');

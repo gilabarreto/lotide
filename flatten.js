@@ -1,4 +1,6 @@
-// Flatten is a function which can flatten into a single-level array an array with other arrays inside.
+// DESCRIPTION: A function that takes in an array that contains elements including nested array of elements and returns a flattened version of the array.
+
+// FUNCTION IMPLEMENTATION
 
 const assertEqual = require('./assertEqual');
 const eqArrays = require('./eqArrays');

@@ -1,6 +1,6 @@
-/* This function should take in a collection of items and return counts for a specific subset of those items.
-It won't count everything. In order to decide what to count, it will also be given an idea of which items
-we care about and it will only count those, ignoring the others. */
+// DESCRIPTION: A function that takes in a collection of items and returns a specific subset of those items.
+
+// FUNCTION IMPLEMENTATION
 
 const assertEqual = require('./assertEqual');
 

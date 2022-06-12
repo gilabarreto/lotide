@@ -1,3 +1,7 @@
+// DESCRIPTION: a function that takes in a source array and an itemsToRemove arrays and returns only the items from the source array that are not in the itemsToRemove array.
+
+// FUNCTION IMPLEMENTATION
+
 const assertArraysEqual = require('./assertArraysEqual');
 
 const without = function (array1, array2) {
@@ -26,6 +30,5 @@ console.log(without([1, 2, 3], [3, 2, 1]));
 console.log(without(["1", "2", "3"], ["1", "2", 3]));
 
 const words = ["hello", "world", "lighthouse"];
-console.log(without(words, ["lighthouse"])); // no need to capture return value for this test case
-// Make sure the original array was not altered by the without function
-console.log(assertArraysEqual(words, ["hello", "world", "lighthouse"]));
+console.log(without(words, ["lighthouse"])); // No need to capture return value for this test case.
+console.log(assertArraysEqual(words, ["hello", "world", "lighthouse"])); // Make sure the original array was not altered by the without function.

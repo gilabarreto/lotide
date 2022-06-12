@@ -1,3 +1,7 @@
+// DESCRIPTION: A function that takes in 2 objects and returns true if they are equal and false otherwise.
+
+// FUNCTION IMPLEMENTATION
+
 const eqArrays = require('./eqArrays');
 
 const assertObjectsEqual = function(object1, object2) {
